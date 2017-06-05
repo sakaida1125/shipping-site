@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+html {
+  font-size: 62.5%;
+}
+
+@mixin fontsize($size: 24, $base: 10) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+
+$ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+$base : #f9f8f6;
+$gold1 : #887f69;
+$gold2 : #e2ddd4;
+$gray : #b0b0b0;
+$red : #9d1a2d;
+
+
+/*共通*/
+
+.text-center
+{
+    text-align: center;
+}
+
+.block-center
+{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.uppercase
+{
+    text-transform: uppercase;
+}
+
+h2
+{
+  margin: 10px auto;
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: -.1rem;
+}
+
+
+/*ヘッダー*/
+
+header{
+
+  background: $base;
+
+  @media (max-width: 550px) {
+    #sp_header{
+      padding-top: 15px;
+      padding-bottom:4px;
+      text-align: center;
+    }  
+    h1{
+      margin: 0;
+      padding: 0;
+    }
+  
+    .sp_sns_navi{
+      padding-bottom:10px;
+    }
+  
+    .sp_sns_btn{
+      padding: 0 10px;
+    }
+  }
+  
+  @media (min-width: 550px) {
+    .sp_sns_navi{
+      display: none;
+    }
+  
+    .sp_sns_btn{
+      display: none;
+    }
+  }    
+}
+
+
+/*メイン*/
+
+
+#main{
+  background-color: $base;
+}
+
+#items{
+  .container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $base;
+  }
+  .item-box {
+    width: 30%;
+    -webkit-flex: auto;
+    flex: auto;
+    margin: 1px 1px;
+    padding: 10px;
+    background-color: #fff;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }  
+    @media (max-width: 550px) {
+      .item-box {
+        width: 49%;
+      }  
+    }
+  .item_name{
+    font-size: 1.3rem; 
+  }
+  .item_price{
+    font-size: 1.6rem; 
+  }
+}
+
+#guide{
+  .container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $base;
+  }
+  .guide-box {
+    width: 49%;
+    -webkit-flex: auto;
+    flex: auto;
+    margin: 1px 1px 7px;
+    padding: 10px;
+    background-color: #fff;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }  
+    @media (max-width: 550px) {
+      .guide-box {
+        width: 99%;
+      }  
+    }
+  .guide_h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: #666;
+  }
+  .guide_h4{
+    margin-top: 8px;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+    color: #666;
+  }
+  .guide_text{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem; 
+  }
+}
+
+
+/*サイドバー*/
+
+#sidebar{
+  
+}
+
+@media (min-width: 550px) {
+  .sp_h2_title{
+    display: none;
+    margin: 20px auto;    
+  }
+  .pc_h2_title{
+    text-align: center;
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .sp_h2_title{
+    text-align: center;
+    margin: 20px auto;
+  }
+  .pc_h2_title{
+    display: none;
+    margin: 30px 0;
+  }  
+}
+
+
+/*ページトップ*/
+
+#page_top{
+  .container{
+    background-color: $base;
+  }
+  
+  .page_top {
+    text-align: right;
+    margin-top: 30px;
+    margin-bottom: 0;
+    background-color: $base;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 2px;
+    background-color: $gold2;
+    border: none;
+  }
+
+  @media (max-width: 550px) {
+    .page_top {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }  
+  }
+}
+
+
+/*フッター*/
+
+footer{
+  background: $base;
+  
+  .footer_navi{
+    margin-top: 20px;
+    color: #000;
+    font-size: 1.2rem;
+  }
+  a {
+    color: #000;
+  }
+  .copy{
+    margin-top: 20px;
+    color: #666;
+    font-size: 1rem;
+  }
+  @media (max-width: 550px) {
+    .copy{
+      margin-top: 10px;
+    }
+  }
+}

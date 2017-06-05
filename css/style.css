@@ -1,0 +1,179 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%; }
+
+/*共通*/
+.text-center {
+  text-align: center; }
+
+.block-center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+h2 {
+  margin: 10px auto;
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: -.1rem; }
+
+/*ヘッダー*/
+header {
+  background: #f9f8f6; }
+  @media (max-width: 550px) {
+    header #sp_header {
+      padding-top: 15px;
+      padding-bottom: 4px;
+      text-align: center; }
+    header h1 {
+      margin: 0;
+      padding: 0; }
+    header .sp_sns_navi {
+      padding-bottom: 10px; }
+    header .sp_sns_btn {
+      padding: 0 10px; } }
+  @media (min-width: 550px) {
+    header .sp_sns_navi {
+      display: none; }
+    header .sp_sns_btn {
+      display: none; } }
+
+/*メイン*/
+#main {
+  background-color: #f9f8f6; }
+
+#items .container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9f8f6; }
+#items .item-box {
+  width: 30%;
+  -webkit-flex: auto;
+  flex: auto;
+  margin: 1px 1px;
+  padding: 10px;
+  background-color: #fff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+@media (max-width: 550px) {
+  #items .item-box {
+    width: 49%; } }
+#items .item_name {
+  font-size: 1.3rem; }
+#items .item_price {
+  font-size: 1.6rem; }
+
+#guide .container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9f8f6; }
+#guide .guide-box {
+  width: 49%;
+  -webkit-flex: auto;
+  flex: auto;
+  margin: 1px 1px 7px;
+  padding: 10px;
+  background-color: #fff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+@media (max-width: 550px) {
+  #guide .guide-box {
+    width: 99%; } }
+#guide .guide_h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: #666; }
+#guide .guide_h4 {
+  margin-top: 8px;
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+  color: #666; }
+#guide .guide_text {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem; }
+
+/*サイドバー*/
+@media (min-width: 550px) {
+  .sp_h2_title {
+    display: none;
+    margin: 20px auto; }
+
+  .pc_h2_title {
+    text-align: center;
+    margin: 30px 0; } }
+@media (max-width: 550px) {
+  .sp_h2_title {
+    text-align: center;
+    margin: 20px auto; }
+
+  .pc_h2_title {
+    display: none;
+    margin: 30px 0; } }
+/*ページトップ*/
+#page_top .container {
+  background-color: #f9f8f6; }
+#page_top .page_top {
+  text-align: right;
+  margin-top: 30px;
+  margin-bottom: 0;
+  background-color: #f9f8f6;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+#page_top hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 2px;
+  background-color: #e2ddd4;
+  border: none; }
+@media (max-width: 550px) {
+  #page_top .page_top {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px; } }
+
+/*フッター*/
+footer {
+  background: #f9f8f6; }
+  footer .footer_navi {
+    margin-top: 20px;
+    color: #000;
+    font-size: 1.2rem; }
+  footer a {
+    color: #000; }
+  footer .copy {
+    margin-top: 20px;
+    color: #666;
+    font-size: 1rem; }
+  @media (max-width: 550px) {
+    footer .copy {
+      margin-top: 10px; } }
+
+/*# sourceMappingURL=style.css.map */
