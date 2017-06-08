@@ -18,6 +18,10 @@ $red : #9d1a2d;
 
 
 /*共通*/
+body{
+  background-color: $base;
+}
+
 
 .text-center
 {
@@ -44,13 +48,32 @@ h2
   letter-spacing: -.1rem;
 }
 
+@media (min-width: 550px) {
+  .sp_h2_title{
+    display: none;
+    margin: 20px auto;    
+  }
+  .pc_h2_title{
+    text-align: center;
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .sp_h2_title{
+    text-align: center;
+    margin: 20px auto;
+  }
+  .pc_h2_title{
+    display: none;
+    margin: 30px 0;
+  }  
+}
+
 
 /*ヘッダー*/
 
 header{
-
-  background: $base;
-
   @media (max-width: 550px) {
     #sp_header{
       padding-top: 15px;
@@ -61,21 +84,41 @@ header{
       margin: 0;
       padding: 0;
     }
-  
+    .pc_sns_navi{
+      display: none;
+    }
+    .pc_sns_btn{
+      display: none;
+    }
     .sp_sns_navi{
       padding-bottom:10px;
     }
-  
     .sp_sns_btn{
       padding: 0 10px;
     }
   }
   
   @media (min-width: 550px) {
+    #sp_header{
+      padding-top: 15px;
+      padding-bottom:4px;
+      text-align: center;
+    }
+    h1{
+      margin: 0;
+      padding: 0;
+      float: left;
+    }
+    .pc_sns_navi{
+      text-align:right;
+      margin: 18px 0 30px;
+    }
+    .pc_sns_btn{
+      padding: 0 7px;
+    }
     .sp_sns_navi{
       display: none;
     }
-  
     .sp_sns_btn{
       display: none;
     }
@@ -87,7 +130,6 @@ header{
 
 
 #main{
-  background-color: $base;
 }
 
 #items{
@@ -103,12 +145,11 @@ header{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: $base;
   }
   .item-box {
-    width: 30%;
-    -webkit-flex: auto;
-    flex: auto;
+    width: 33%;
+  /*-webkit-flex: auto;*/
+  /*flex: auto;*/
     margin: 1px 1px;
     padding: 10px;
     background-color: #fff;
@@ -118,7 +159,7 @@ header{
   }  
     @media (max-width: 550px) {
       .item-box {
-        width: 49%;
+        width: 49.2%;
       }  
     }
   .item_name{
@@ -126,6 +167,20 @@ header{
   }
   .item_price{
     font-size: 1.6rem; 
+  }
+  .retreat_btn{
+    float: left;
+    width: 120px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    color: #fff;
+    margin: 20px 0 10px 0;
+    padding: 0;
+    background-color: $gold1;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
   }
 }
 
@@ -142,7 +197,6 @@ header{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: $base;
   }
   .guide-box {
     width: 49%;
@@ -165,13 +219,13 @@ header{
     margin-bottom: 10px;
     font-weight: bold;
     font-size: 1.6rem;
-    color: #666;
+    color: $gold1;
   }
   .guide_h4{
     margin-top: 8px;
     margin-bottom: 5px;
     font-size: 1.3rem;
-    color: #666;
+    color: $gold1;
   }
   .guide_text{
     padding-top: 0px;
@@ -181,33 +235,275 @@ header{
   }
 }
 
+#bread{
+  .bread_box{
+    width: 100%;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    background-color: $gold2;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .bread_icon{
+    padding: 0 10px;
+  }
+  .bread_text{
+    font-size: 1.6px;
+    color: $gold1;
+  }
+}
+
+#main_img{
+  @media (max-width: 550px) {
+    .pc_main_img{
+      display: none;
+    }
+    .sp_main_img{
+      width: 100%;
+      height: auto;
+      padding: 0;
+      margin: 10px 0;
+    }
+  }
+  @media (min-width: 550px) {
+    .pc_main_img{
+      width: 100%;
+      height: auto;
+      padding: 0;
+      margin: 10px 0;
+    }
+    .sp_main_img{
+      display: none;
+    }
+  }
+}
+
+#watch_list{
+  .container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .watch-box {
+    width: 33%;
+  /*-webkit-flex: auto;*/
+  /*flex: auto;*/
+    margin: 1px 1px;
+    padding: 10px;
+    background-color: #fff;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }  
+    @media (max-width: 550px) {
+      .watch-box {
+        width: 49.2%;
+      }  
+    }
+  .watch_name{
+    font-size: 1.3rem; 
+  }
+  .watch_price{
+    font-size: 1.6rem; 
+  }
+}
+
+#products{
+  .container{
+    margin: 10px 0 0 0;
+    width: 100%;
+    background-color: #fff;
+  }
+  .in_box{
+    width: 85%;
+    margin: 0 auto;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .title_box{
+    padding: 10px 0 0 0;
+    border-width: 1px;
+    border-color: #d1d1d1;
+    border-bottom-style: solid;
+  }
+  .name{
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 50px;
+    letter-spacing: 3px;
+  }
+  .kataban{
+    font-size: 1.2rem;
+    color: #d1d1d1;
+    float: right;
+    line-height: 50px;
+  }
+  .display_box{
+    padding-top: 20px;
+
+  }
+  #display_img img {
+    width: 100%;
+  }
+  .list_box{
+    padding-top: 20px;
+  }  
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+  li img {
+    width: 70px;
+    cursor: pointer;
+  }
+  .description_area{
+    padding-top: 20px;
+    border-width: 1px;
+    border-color: #d1d1d1;
+    border-bottom-style: solid;
+  }
+}
+
+
+
 
 /*サイドバー*/
 
 #sidebar{
-  
-}
-
-@media (min-width: 550px) {
-  .sp_h2_title{
-    display: none;
-    margin: 20px auto;    
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 0 0 20px;
+    box-sizing: border-box; 
   }
-  .pc_h2_title{
-    text-align: center;
-    margin: 30px 0;
+  @media (max-width: 550px) {
+    .container {
+      padding: 0;
+    } 
   }
-}
-
-@media (max-width: 550px) {
-  .sp_h2_title{
-    text-align: center;
-    margin: 20px auto;
+  .sidebar_box {
+    width: 100%;
+    margin: 0 0 10px;
+    background-color: #fff;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
   }
-  .pc_h2_title{
-    display: none;
-    margin: 30px 0;
+  .search_text{
+    padding: 15px 0px 8px 15px;
+  }
+  form{
+    width: 85%;
+    margin:0 auto;
+  }
+  input[type="text"]{
+    padding: 0px 0px;
+    background-color: #F5F5F5;
+    border: 0 solid #D1D1D1;
+    height: 30px;
+  }
+  .search {
+    background: url('../images/top/search_icon.png') no-repeat 16px 16px;
+    background-position: right center;
+  }
+  h3{
+    margin-bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: $gold1;
+    border: none;
+  }
+  .sidebar_h3_text{
+    padding: 14px 10px;
+    float: left;
+  } 
+  .sidebar_h3_icon{
+    padding: 13px 10px;
+    float: right;
+  }
+  ul{
+    margin-bottom: 0;
+  }
+  li{
+    list-style: none;
+  }
+  .sidebar_box_categories {
+    width: 100%;
+    margin: 0 0 10px;
+    background-color: $base;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .categories_box{
+    margin-top: 0;
+    margin-bottom: 2px;
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+  }
+  .categories_text{
+    padding: 11px 10px;
+    float: left;
+    font-size: 1.2rem;
+    color: #000;
+  }
+  .container2{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    position: relative;
+    padding: 5px;
+  }
+  .in-box{
+    width: 49%;
+    -webkit-flex: auto;
+    flex: auto;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 5px;
   }  
+    @media (min-width: 550px){
+      .in-box {
+        width: 100%;
+      } 
+    }
+  .sidebar-img{
+    margin: 10px auto 5px auto;
+  }
+  .sidebar-text{
+    font-size: 1.2rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+    @media (min-width: 550px){
+      .sidebar-text{
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+      }
+    }
+  .more-btn{
+    padding: 5px 0 15px 0;
+    text-align: center;
+  }
 }
 
 
@@ -248,10 +544,8 @@ header{
 /*フッター*/
 
 footer{
-  background: $base;
-  
   .footer_navi{
-    margin-top: 20px;
+    padding-top: 20px;
     color: #000;
     font-size: 1.2rem;
   }
